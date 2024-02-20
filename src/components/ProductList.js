@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './ProductList.css';
+import {useDispatch} from 'react-redux'
+import { addToCart } from '../redux/reducers/cartSlice';
 
 const ProductList = ({ cart, setCart }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [products, setProducts] = useState([]);
   const [isLoading,setisLoading]=useState(true);
+
+  const dispatch=useDispatch();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -22,16 +26,13 @@ const ProductList = ({ cart, setCart }) => {
     fetchProducts();
   }, []);
 
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-  };
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
   const filteredProducts = products.filter((product) =>
-  product.title.toLowerCase().includes(searchTerm.toLowerCase())
+  product.title.toLowerCase().includes(searchTerm.toLowerCase()) || product.category.toLowerCase().includes(searchTerm.toLowerCase())
 );
 
   return (isLoading?<div><h1>Loading...</h1></div>:
@@ -54,7 +55,8 @@ const ProductList = ({ cart, setCart }) => {
               <img src={product.image} alt={product.title} />
               <p>{product.title}</p>
               <p>${product.price}</p>
-              <button onClick={() => addToCart(product)}>Add to Cart</button>
+              <p>Rating: {product.rating.rate}</p>
+              <button onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
             </div>
           ))
         )}

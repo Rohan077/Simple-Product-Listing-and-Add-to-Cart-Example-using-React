@@ -1,8 +1,13 @@
 // Cart.js
 import React from 'react';
 import './Cart.css';
+import {useSelector,useDispatch} from 'react-redux'
+import { removeFromCart } from '../redux/reducers/cartSlice';
 
-const Cart = ({ cart, clearCart }) => {
+const Cart = () => {
+
+  const cart=useSelector(state=>state.cart);
+  const dispatch=useDispatch();
     
   const calculateTotal = () => {
     return cart.reduce((total, product) => total + product.price, 0).toFixed(2);
@@ -24,15 +29,15 @@ const Cart = ({ cart, clearCart }) => {
                   <div className="item-details">
                     <p>{product.title}</p>
                     <p>${product.price}</p>
+                    <button onClick={() => dispatch(removeFromCart(product))}>X</button>
                   </div>
                 </div>
               </li>
             ))}
           </ul>
           <div className="cart-total">
-            <p>Total: ${calculateTotal()}</p>
+            <h1>Total: ${calculateTotal()}</h1>
           </div>
-          <button onClick={clearCart}>Clear Cart</button>
           <button className="order-now" onClick={()=>alert(`Order of ${calculateTotal()}$ has been made!`)}>Order Now</button>
         </>
       )}
