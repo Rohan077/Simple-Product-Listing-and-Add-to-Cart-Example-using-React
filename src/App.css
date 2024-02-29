@@ -9,9 +9,10 @@
   justify-content: center;
   align-items: center;
 }
-
-img{
+ 
+img {
   max-width: 20%;
-    height: auto;
-    border-radius: 4px;
+  height: auto;
+  border-radius: 4px;
+  background: white url("https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif") fixed no-repeat center;
 }
