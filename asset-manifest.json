@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/static/css/main.13737254.css",
-    "main.js": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/static/js/main.d87dc058.js",
-    "static/js/488.5c753e47.chunk.js": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/static/js/488.5c753e47.chunk.js",
-    "index.html": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/index.html",
-    "main.13737254.css.map": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/static/css/main.13737254.css.map",
-    "main.d87dc058.js.map": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/static/js/main.d87dc058.js.map",
-    "488.5c753e47.chunk.js.map": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/static/js/488.5c753e47.chunk.js.map"
+    "main.css": "/Ecomm-Ekart/static/css/main.13737254.css",
+    "main.js": "/Ecomm-Ekart/static/js/main.c066b2e1.js",
+    "static/js/488.5c753e47.chunk.js": "/Ecomm-Ekart/static/js/488.5c753e47.chunk.js",
+    "index.html": "/Ecomm-Ekart/index.html",
+    "main.13737254.css.map": "/Ecomm-Ekart/static/css/main.13737254.css.map",
+    "main.c066b2e1.js.map": "/Ecomm-Ekart/static/js/main.c066b2e1.js.map",
+    "488.5c753e47.chunk.js.map": "/Ecomm-Ekart/static/js/488.5c753e47.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.13737254.css",
-    "static/js/main.d87dc058.js"
+    "static/js/main.c066b2e1.js"
   ]
 }
