@@ -1,37 +1,40 @@
-import React from "react";
+import React, {  } from "react";
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import "../login/Login.css";
+import {Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { signIn } from "../../redux/reducers/loginSlice";
  
-const Login = ({ setIsLoggedIn }) => {
-  const navigate = useNavigate();
-  const username = useRef(null);
+const Login = () => {
+  const email = useRef(null);
   const password = useRef(null);
+
+  const dispatch=useDispatch();
  
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(username.current.value, password.current.value);
  
-    if (
-      username.current.value === "admin@mail.com" &&
-      password.current.value === "admin123"
-    ) {
-      console.log("form submitted...");
-      setIsLoggedIn(true);
-      navigate("/home");
-    } else {
-      alert("Wrong password or email!");
+    const user={
+      email:email.current.value,
+      password:password.current.value,
     }
+
+      if(user.email && user.password){
+        dispatch(signIn(user))
+        window.location.reload()
+      }else{
+        alert('Please enter all the details!')
+      }
   };
  
   return (
     <div>
       <h1>Login</h1>
       <form className="form" onSubmit={onSubmit}>
-        <input type="email" ref={username} placeholder="Username:" />
+        <input type="email" ref={email} placeholder="Email:" />
         <input type="password" ref={password} placeholder="Password:" />
         <button type="submit">Login</button>
       </form>
+      <p>Not registered? <Link to="/registration">Register here</Link>.</p>
     </div>
   );
 };

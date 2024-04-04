@@ -2,11 +2,12 @@
 import React from "react";
 import "./Cart.css";
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart, emptyCart } from "../../redux/reducers/cartSlice";
+import { removeFromCart, emptyCart, getProductsInCart } from "../../redux/reducers/cartSlice";
 import { useNavigate } from "react-router-dom";
  
 const Cart = () => {
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector(getProductsInCart);
+  console.log(cart)
   const dispatch = useDispatch();
   const navigate = useNavigate();
  
@@ -16,7 +17,12 @@ const Cart = () => {
  
   return (
     <div className="cart">
+      <div className="cart-header">
       <h2>Shopping Cart</h2>
+      <button className="logout" onClick={() => navigate("/home")}>
+        Back to home
+      </button>
+      </div>
       {cart.length === 0 ? (
         <p>Your cart is empty</p>
       ) : (
@@ -51,9 +57,7 @@ const Cart = () => {
           </button>
         </>
       )}
-      <button className="logout" onClick={() => navigate("/login")}>
-        Logout
-      </button>
+      
     </div>
   );
 };
