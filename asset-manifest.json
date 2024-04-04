@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/static/css/main.13737254.css",
+    "main.js": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/static/js/main.d87dc058.js",
+    "static/js/488.5c753e47.chunk.js": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/static/js/488.5c753e47.chunk.js",
+    "index.html": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/index.html",
+    "main.13737254.css.map": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/static/css/main.13737254.css.map",
+    "main.d87dc058.js.map": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/static/js/main.d87dc058.js.map",
+    "488.5c753e47.chunk.js.map": "/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/static/js/488.5c753e47.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13737254.css",
+    "static/js/main.d87dc058.js"
+  ]
+}
