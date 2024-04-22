@@ -1,5 +1,8 @@
 # Website Link - https://ecomm-ekart.netlify.app/
 
+![image](https://github.com/Rohan077/Simple-Product-Listing-and-Add-to-Cart-Example-using-React/assets/69914504/48401cc1-7be1-4392-9049-7393a6440cd2)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
